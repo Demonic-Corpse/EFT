@@ -2,8 +2,8 @@ module.exports = {
   apps: [
     {
       name: 'elite-football',
-      script: 'server/index.ts',
-      interpreter: './node_modules/.bin/tsx',
+      script: 'npm',
+      args: 'run server',
       instances: 1,
       autorestart: true,
       watch: false,

@@ -1604,8 +1604,8 @@ app.use('/api', (_req: Request, res: Response) => {
 const distDir = path.resolve(__dirname, '..', 'dist');
 if (fs.existsSync(distDir)) {
   app.use(express.static(distDir));
-  app.get('*', (req: Request, res: Response, next: NextFunction) => {
-    if (req.path.startsWith('/api') || req.path.startsWith('/uploads')) {
+  app.use((req: Request, res: Response, next: NextFunction) => {
+    if (req.method !== 'GET' || req.path.startsWith('/api') || req.path.startsWith('/uploads')) {
       return next();
     }
     res.sendFile(path.join(distDir, 'index.html'));
