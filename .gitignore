@@ -1,0 +1,83 @@
+# -----------------------------------------------------------------
+# Dependencies
+# -----------------------------------------------------------------
+node_modules/
+.pnp
+.pnp.js
+
+# -----------------------------------------------------------------
+# Production Build Outputs
+# -----------------------------------------------------------------
+dist/
+dist-ssr/
+*.local
+
+# -----------------------------------------------------------------
+# Environment Variables & Secrets (CRITICAL: NEVER COMMIT THESE)
+# -----------------------------------------------------------------
+.env
+.env.production
+.env.staging
+.env.local
+.env.*.local
+*.pem
+*.key
+*.cert
+*.crt
+
+# Allow .env.example template to be committed
+!.env.example
+
+# -----------------------------------------------------------------
+# Academy Database & User Data (CRITICAL: NEVER LEAK USER RECORDS)
+# -----------------------------------------------------------------
+server/data/*.sqlite
+server/data/*.sqlite-journal
+server/data/*.sqlite3
+server/data/*.db
+*.sqlite
+*.sqlite-journal
+*.sqlite3
+
+# Keep server/data directory tracked
+!server/data/.gitkeep
+
+# -----------------------------------------------------------------
+# Uploaded Media & Files (Confidential Academy & Student Media)
+# -----------------------------------------------------------------
+public/uploads/*
+!public/uploads/.gitkeep
+
+# -----------------------------------------------------------------
+# Logs, Debugging & Scratch Files
+# -----------------------------------------------------------------
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+scratch*
+tmp/
+temp/
+
+# -----------------------------------------------------------------
+# OS & Editor Files
+# -----------------------------------------------------------------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.sublime-workspace
+*.sublime-project
+
